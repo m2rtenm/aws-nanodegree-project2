@@ -4,6 +4,7 @@ PORT=443
 echo "Port: $PORT"
 
 APP_NAME='aws-nanodegree-project2'
+REGION='eu-north-1'
 
 # POST method predict
 curl -d '{
@@ -27,5 +28,5 @@ curl -d '{
    }
 }'\
      -H "Content-Type: application/json" \
-     -X POST https://$APP_NAME.elasticbeanstalk.com:$PORT/predict 
+     -X POST https://$APP_NAME.$REGION.elasticbeanstalk.com:$PORT/predict 
      #your application name <yourappname>goes here
