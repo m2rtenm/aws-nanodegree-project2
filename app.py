@@ -43,6 +43,3 @@ def predict():
     scaled_payload = scale(inference_payload)
     prediction = list(clf.predict(scaled_payload))
     return jsonify({'prediction': prediction})
-
-if __name__ == "__main__":
-    app.run(debug=True)
